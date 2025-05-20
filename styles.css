@@ -63,6 +63,7 @@ h1 {
     padding-right: 1.3rem;
 }
 
+/* Footer content */
 footer {
     background-color: hsl(0, 0%, 100%);
     display: flex;
@@ -79,6 +80,12 @@ footer {
     gap: 1rem;
 }
 
+#avatar-image {
+    border-radius: 100%;
+    display: block;
+    width: 2.5rem;
+}
+
 #name {
     color: var(--veryDarkGrayishBlue);
     margin-bottom: 0.2rem;
@@ -89,6 +96,7 @@ footer {
     font-weight: 500;
 }
 
+/* Share button */
 button {
     align-self: center;
     background-color: var(--lightGrayishBlue);
@@ -99,16 +107,22 @@ button {
     height: 2rem;
 }
 
-#avatar-image {
-    border-radius: 100%;
-    display: block;
-    width: 2.5rem;
+#share-icon {
+    fill: var(--desaturatedDarkBlue);
+}
+
+button:active {
+    background-color: var(--veryDarkGrayishBlue);
+}
+
+button:active #share-icon {
+    fill: var(--white);
 }
 
 /* Share container */
 #share-panel {
     align-items: center;
-    display: flex;
+    display: none;
     flex-direction: row;
     gap: 1rem;
 }
@@ -123,7 +137,18 @@ button {
     #card-container {
         display: flex;
         flex-direction: row;
+        position: relative;
         width: 45rem;
+    }
+
+    #card-image {
+        height: auto;
+        width: 18rem;
+    }
+
+    #content-container {
+        gap: 0;
+        padding-bottom: 0.875rem;
     }
 
     h1 {
@@ -133,4 +158,17 @@ button {
     #text-container p {
         padding-right: 0;
     }
+
+    #share-panel {
+    align-items: center;
+    background-color: var(--veryDarkGrayishBlue);
+    border-radius: 0.5rem;
+    bottom: 5rem;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    position: absolute;
+    right: 2.5rem;
+    z-index: 1;
+    display: none;
+}
 }
