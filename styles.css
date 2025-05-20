@@ -22,7 +22,7 @@ body {
 
 /* Card container */
 #card-container {
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     background-color: var(--white);
     margin: auto;
     overflow: hidden;
@@ -40,7 +40,7 @@ body {
 #content-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 #text-container {
@@ -113,12 +113,24 @@ button {
     gap: 1rem;
 }
 
-
 #share-panel span {
     color: var(--grayishBlue);
     letter-spacing: 0.3rem;
 }
 
-a {
-    margin: auto;
+/* Desktop version */
+@media screen and (min-width: 48rem) {
+    #card-container {
+        display: flex;
+        flex-direction: row;
+        width: 45rem;
+    }
+
+    h1 {
+        padding-right: 2rem;
+    }
+
+    #text-container p {
+        padding-right: 0;
+    }
 }
