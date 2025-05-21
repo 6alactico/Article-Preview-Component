@@ -24,6 +24,7 @@ body {
 #card-container {
     background-color: var(--white);
     border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 3rem rgba(72, 85, 106, 0.05);
     margin: auto;
     width: 22rem;
 }
