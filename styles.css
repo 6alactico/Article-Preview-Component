@@ -30,7 +30,7 @@ body {
 
 #card-image {
     border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
     display: block;
     height: 14.5rem;
     width: 100%;
@@ -57,7 +57,7 @@ h1 {
 
 #text-container p {
     color:  var(--desaturatedDarkBlue);
-    line-height: 1.4rem;
+    line-height: 1.2rem;
     font-weight: 500;
     padding-right: 1.3rem;
 }
@@ -70,6 +70,8 @@ h1 {
     height: 4.5rem;
     justify-content: space-between;
     padding: 1rem 2.3rem 1rem 2.3rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 .footer-content.share-active { background-color: var(--veryDarkGrayishBlue); }
@@ -113,14 +115,15 @@ h1 {
 .share-icon-active { fill: var(--white); }
 
 /* Share container */
-.share-panel {
+.share-popover {
     align-items: center;
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    justify-content: center;
 }
 
-.share-panel span {
+.share-popover span {
     color: var(--grayishBlue);
     letter-spacing: 0.3rem;
 }
@@ -139,6 +142,8 @@ h1 {
     #card-image {
         height: auto;
         width: 18rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5rem;
     }
 
     #content-container {
@@ -154,29 +159,28 @@ h1 {
         padding-right: 0;
     }
 
-    .share-panel {
+    .share-popover {
     background-color: var(--veryDarkGrayishBlue);
     border-radius: 0.5rem;
     display: flex;
     gap: 1rem;
     padding: 1rem 2rem;
     position: absolute;
-    transform: translate(15rem, -5rem);
-    z-index: 10;
+    transform: translate(14rem, -4.5rem);
+    z-index: 999;
     }
-
-    .share-panel::after {
-    background-color: var(--veryDarkGrayishBlue);
-    border-radius: 0.5rem;
+    
+    /* Arrow */
+    .share-popover::after {
+    border-color: var(--veryDarkGrayishBlue) transparent transparent transparent;
+    border-width: 0.875rem;
+    border-style: solid;
     content: "";
-    gap: 1rem;
-    padding: 1rem 2rem;
     position: absolute;
-    transform: translate(15rem, -5rem);
-    z-index: 10;
+    top: 3.46rem;
     }
 
-    .share-panel.show {
+    .share-popover.show {
         display: flex;
     }
 

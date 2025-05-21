@@ -2,9 +2,8 @@
 const button = document.querySelector('.share-button');
 const icon = document.querySelector('.share-icon');
 const profile = document.querySelector('.profile');
-const sharePanel = document.querySelector('.share-panel');
+const sharePopover = document.querySelector('.share-popover');
 const footerContent = document.querySelector('.footer-content');
-
 
 // Toggle states
 button.addEventListener('click', () => {
@@ -14,6 +13,6 @@ button.addEventListener('click', () => {
 
     // Toggle between profile and share panel
     profile.classList.toggle('hidden');
-    sharePanel.classList.toggle('hidden');
+    sharePopover.classList.toggle('hidden');
     footerContent.classList.toggle('share-active'); // Toggle between footer background color
 });
