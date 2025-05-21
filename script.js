@@ -3,7 +3,7 @@ const button = document.querySelector('.share-button');
 const icon = document.querySelector('.share-icon');
 const profile = document.querySelector('.profile');
 const sharePopover = document.querySelector('.share-popover');
-const footerContent = document.querySelector('.footer-content');
+const cardFooter = document.querySelector('.card-footer');
 
 // Toggle states
 button.addEventListener('click', () => {
@@ -14,5 +14,5 @@ button.addEventListener('click', () => {
     // Toggle between profile and share panel
     profile.classList.toggle('hidden');
     sharePopover.classList.toggle('hidden');
-    footerContent.classList.toggle('share-active'); // Toggle between footer background color
+    cardFooter.classList.toggle('share-active'); // Toggle between footer background color
 });
