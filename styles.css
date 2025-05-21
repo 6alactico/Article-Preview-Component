@@ -24,7 +24,7 @@ body {
 #card-container {
     background-color: var(--white);
     border-radius: 0.5rem;
-    box-shadow: 0.5rem 0.5rem 3rem rgba(72, 85, 106, 0.05);
+    box-shadow: 0.5rem 0.5rem 3rem rgba(72, 85, 106, 0.1);
     margin: auto;
     width: 22rem;
 }
@@ -65,7 +65,7 @@ h1 {
 #card-text p {
     color:  var(--desaturatedDarkBlue);
     font-weight: 500;
-    line-height: 1.2rem;
+    line-height: 1.3rem;
     padding-right: 2rem;
 }
 
@@ -96,15 +96,8 @@ h1 {
     width: 2.5rem;
 }
 
-#name {
-    color: var(--veryDarkGrayishBlue);
-    margin-bottom: 0.2rem;
-}
-
-#date {
-    color: var(--grayishBlue);
-    font-weight: 500;
-}
+#name { color: var(--veryDarkGrayishBlue); margin-bottom: 0.2rem; }
+#date { color: var(--grayishBlue); font-weight: 500; }
 
 /* Share button */
 .share-button {
@@ -130,12 +123,9 @@ h1 {
     justify-content: center;
 }
 
-.share-popover span {
-    color: var(--grayishBlue);
-    letter-spacing: 0.3rem;
-}
+.share-popover span { color: var(--grayishBlue); letter-spacing: 0.3rem; }
 
-.hidden { display: none !important; }
+.hidden { display: none !important; } /* !important overrides a style */
 
 /* Desktop version */
 @media screen and (min-width: 48rem) {
@@ -150,16 +140,16 @@ h1 {
     #card-image-container {
         border-top-right-radius: 0;
         border-bottom-left-radius: 0.5rem;
-        width: 50%;
         height: auto;
         overflow: hidden;
+        width: 50%;
     }
 
     #card-image {
-        object-fit: cover;
         height: 100%;
-        width: 100%;
+        object-fit: cover;
         object-position: left;
+        width: 100%;
     }
 
     #content-container {
@@ -194,8 +184,6 @@ h1 {
     }
 
     .share-popover.show { display: flex; }
-
     .profile.hidden { display: flex !important; }
-
     .card-footer.share-active { background-color: transparent; }
 }
