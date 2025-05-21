@@ -5,7 +5,6 @@ const profile = document.querySelector('.profile');
 const sharePopover = document.querySelector('.share-popover');
 const cardFooter = document.querySelector('.card-footer');
 
-// Toggle states
 button.addEventListener('click', () => {
     // Toggle button color
     button.classList.toggle('share-button-active'); // Toggle button background color
